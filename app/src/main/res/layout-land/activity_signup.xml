@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.birju_000.xpensemanager.signup">
+
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/firstNameLabel"
+            android:textAlignment="gravity"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline4"
+            tools:layout_editor_absoluteY="86dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="-226dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="68dp" />
+
+        <EditText
+            android:id="@+id/firstNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAlignment="gravity"
+            app:layout_constraintBaseline_toBaselineOf="@+id/firstNameLabel"
+            app:layout_constraintLeft_toRightOf="@+id/firstNameLabel">
+
+            <requestFocus></requestFocus>
+        </EditText>
+
+        <TextView
+            android:id="@+id/lastNameLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/lastNameLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameLabel"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="113dp"
+            android:layout_marginLeft="20dp" />
+
+        <EditText
+            android:id="@+id/lastNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lastNameLabel"
+            app:layout_constraintLeft_toRightOf="@+id/lastNameLabel"
+            tools:layout_editor_absoluteY="101dp" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/emailLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameLabel"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBaseline_toBaselineOf="@+id/emailLabel"
+            app:layout_constraintLeft_toRightOf="@+id/emailLabel" />
+
+        <TextView
+            android:id="@+id/passwordLabelSignUp"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/passwordLabelSignUp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <EditText
+            android:id="@+id/passwordTextSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-2dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBaseline_toBaselineOf="@+id/passwordLabelSignUp"
+            app:layout_constraintLeft_toRightOf="@+id/passwordLabelSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/createAccountBtn"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintRight_toRightOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextSignUp"
+            tools:layout_editor_absoluteY="298dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="214dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/welcomeText"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="30sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintLeft_toRightOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/parent"
+            app:layout_constraintTop_toTopOf="@+id/parent"
+            tools:layout_editor_absoluteX="74dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+

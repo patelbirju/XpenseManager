@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Xpense Manager</string>
+    <string name="categoryLabel">Category</string>
+    <string name="amountLabel">Amount</string>
+    <string name="amount" />
+
+    <string name="welcomeText">Welcome</string>
+    <string name="firstNameLabel">First Name</string>
+    <string name="lastNameLabel">Last Name</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordLabelSignUp">Password</string>
+    <string name="signUpBtn">Sign Up</string>
+    <string name="createAccountBtn">Create Account</string>
+
+
+    <string name="userNameLabel">User Name</string>
+    <string name="passwordLabel">Password</string>
+    <string name="loginBtnText">Login</string>
+
+    <string name="myExpensesLabel">My Expenses</string>
+    <string name="addExpenseLabel">Add Expense</string>
+    <string name="manageExpenseLabel">Manage Expense</string>
+    <string name="setupBudgetLabel">Setup Budget</string>
+    <string name="generateGraphLabel">Generate Graph</string>
+
+
+    <string-array name="categories">
+        <item>Snacks</item>
+        <item>Grocery</item>
+        <item>Maintenance</item>
+        <item>Entertainment</item>
+        <item>Medical</item>
+        <item>Other</item>
+    </string-array>
+</resources>

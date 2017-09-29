@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.birju_000.xpensemanager.home">
+
+    <Button
+        android:id="@+id/myExpenseBtn"
+        android:layout_width="175dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/myExpensesLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <Button
+        android:id="@+id/addExpenseBtn"
+        android:layout_width="175dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/addExpenseLabel"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/myExpenseBtn"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <Button
+        android:id="@+id/manageExpenseBtn"
+        android:layout_width="175dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/manageExpenseLabel"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExpenseBtn"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/setupBudgetBtn"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/setupBudgetLabel"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/manageExpenseBtn" />
+
+    <Button
+        android:id="@+id/generateGraphBtn"
+        android:layout_width="175dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/generateGraphLabel"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/setupBudgetBtn"
+        tools:layout_editor_absoluteY="292dp" />
+
+</android.support.constraint.ConstraintLayout>

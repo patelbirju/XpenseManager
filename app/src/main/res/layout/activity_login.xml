@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.birju_000.xpensemanager.login">
+
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/userNameLabel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <EditText
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingBottom="5dp"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/userNameLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameLabel"
+        app:layout_constraintLeft_toRightOf="@+id/userNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <requestFocus />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="92dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/passwordLabel"
+        android:textAlignment="gravity"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/userNameLabel" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/passwordLabel"
+        app:layout_constraintLeft_toRightOf="@+id/passwordLabel"
+        app:layout_constraintTop_toBottomOf="@+id/userNameText"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="199dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/loginBtnText"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="364dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="66dp" />
+
+    <Button
+        android:id="@+id/createAccountBtn"
+        android:layout_width="195dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/signUpBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+</android.support.constraint.ConstraintLayout>
