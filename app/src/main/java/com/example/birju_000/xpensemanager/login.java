@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
@@ -16,6 +17,13 @@ public class login extends AppCompatActivity
     private  Button loginBtn;
     private Button signUpBtn;
 
+    private EditText userNameText;
+    private EditText passwordText;
+
+    private String userName;
+    private String password;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +31,8 @@ public class login extends AppCompatActivity
 
         loginBtn = (Button) findViewById(R.id.loginBtn);
         signUpBtn = (Button) findViewById(R.id.createAccountBtn);
+
+
 
         //set listeners
         loginBtn.setOnClickListener(this);
@@ -34,6 +44,16 @@ public class login extends AppCompatActivity
         switch (view.getId()){
             case R.id.loginBtn:
                 //code for Login
+
+                userNameText = (EditText) findViewById(R.id.userNameText);
+                userName = userNameText.getText().toString();
+                passwordText = (EditText) findViewById(R.id.passwordText);
+                password = passwordText.getText().toString();
+
+                //System.out.println("Username: "+userName.getText().toString()+", Password: "+passWord.getText().toString());
+
+
+
                 Intent homeIntent = new Intent(this,home.class);
                 startActivity(homeIntent);
                 break;
