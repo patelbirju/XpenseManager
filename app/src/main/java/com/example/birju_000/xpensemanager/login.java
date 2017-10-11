@@ -52,8 +52,6 @@ public class login extends AppCompatActivity
 
                 //System.out.println("Username: "+userName.getText().toString()+", Password: "+passWord.getText().toString());
 
-
-
                 Intent homeIntent = new Intent(this,home.class);
                 startActivity(homeIntent);
                 break;
