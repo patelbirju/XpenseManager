@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Xpense Manager</string>
-    <string name="categoryLabel">Category</string>
-    <string name="amountLabel">Amount</string>
-    <string name="amount" />
 
     <string name="welcomeText">Welcome</string>
     <string name="firstNameLabel">First Name</string>
@@ -23,6 +20,12 @@
     <string name="setupBudgetLabel">Setup Budget</string>
     <string name="generateGraphLabel">Generate Graph</string>
 
+
+    <string name="dateLabel">Date</string>
+    <string name="datePicked"></string>
+    <string name="categoryLabel">Category</string>
+    <string name="amountLabel">Amount</string>
+    <string name="amount" />
 
     <string-array name="categories">
         <item>Snacks</item>

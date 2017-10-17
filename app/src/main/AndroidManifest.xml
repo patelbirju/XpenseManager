@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".signup" />
-        <activity android:name=".home"/>
+        <activity android:name=".home" />
+        <activity android:name=".addExpense"></activity>
     </application>
 
 </manifest>
