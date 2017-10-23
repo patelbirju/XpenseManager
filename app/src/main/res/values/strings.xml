@@ -25,7 +25,12 @@
     <string name="datePicked"></string>
     <string name="categoryLabel">Category</string>
     <string name="amountLabel">Amount</string>
-    <string name="amount" />
+    <string name="amountText"></string>
+    <string name="locationLabel">Location</string>
+    <string name="locationText"></string>
+    <string name="descriptionLabel">Description</string>
+    <string name="descriptionText"></string>
+    <string name="addExpenseBtn">Add Expense</string>
 
     <string-array name="categories">
         <item>Snacks</item>
