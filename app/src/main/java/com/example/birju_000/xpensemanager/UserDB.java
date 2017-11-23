@@ -49,7 +49,7 @@ public final class UserDB {
             "DROP TABLE IF EXISTS " + USER_TABLE;
 
 
-    //Usig SQliteOpenHelper to create the database
+    //Using SQliteOpenHelper to create the database
 
     public static class UserDbHelper extends SQLiteOpenHelper {
 
