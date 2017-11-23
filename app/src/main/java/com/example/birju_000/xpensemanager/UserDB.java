@@ -27,12 +27,21 @@ public final class UserDB {
         public static final String PASSWORD = "Password";
     }*/
 
+    //user table constants
     public static final String USER_TABLE = "user";
     public static final String USER_ID = "_id";
     public static final String FIRST_NAME = "firstName";
     public static final String LAST_NAME = "lastName";
     public static final String EMAIL = "email";
     public static final String PASSWORD = "password";
+
+    //expense table constants
+    public static final String EXPENSE_TABLE = "expense";
+    public static final String EXPENSE_ID = "_id";
+    public static final String AMOUNT = "amount";
+    public static final String LOCATION = "location";
+    public static final String DESCRIPTION = "description";
+    public static final String CATEGORY = "category";
 
 
 
