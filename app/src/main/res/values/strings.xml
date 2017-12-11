@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Xpense Manager</string>
 
-    <string name="welcomeText">Welcome</string>
+    <string name="welcomeText">Xpense Manager</string>
     <string name="firstNameLabel">First Name</string>
     <string name="lastNameLabel">Last Name</string>
     <string name="emailLabel">Email</string>
@@ -30,7 +30,7 @@
     <string name="locationText"></string>
     <string name="descriptionLabel">Description</string>
     <string name="descriptionText"></string>
-    <string name="addExpenseBtn">Add Expense</string>
+    <string name="saveExpenseBtn">Save</string>
 
     <string-array name="categories">
         <item>Snacks</item>
@@ -40,4 +40,5 @@
         <item>Medical</item>
         <item>Other</item>
     </string-array>
+    <string name="title_activity_expenses">expenses</string>
 </resources>

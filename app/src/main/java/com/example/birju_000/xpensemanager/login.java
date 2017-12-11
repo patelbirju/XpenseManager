@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
+import android.widget.Toast;
 
 public class login extends AppCompatActivity
     implements  OnEditorActionListener, OnClickListener{
@@ -44,6 +45,7 @@ public class login extends AppCompatActivity
         switch (view.getId()){
             case R.id.loginBtn:
                 //code for Login
+                // username is assumed as email, temporary
 
                 userNameText = (EditText) findViewById(R.id.userNameText);
                 userName = userNameText.getText().toString();
@@ -51,9 +53,18 @@ public class login extends AppCompatActivity
                 password = passwordText.getText().toString();
 
                 //System.out.println("Username: "+userName.getText().toString()+", Password: "+passWord.getText().toString());
+                XpenseManagerDB db = new XpenseManagerDB(getApplicationContext());
+                User user = db.getUser(userName);
+                if(user == null){
+                    Toast.makeText(this, "Error: user not found ", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent homeIntent = new Intent(this,home.class);
+                    startActivity(homeIntent);
+                    Toast.makeText(this, "Welcome, "+user.getFirstName(), Toast.LENGTH_LONG).show();
+                }
 
-                Intent homeIntent = new Intent(this,home.class);
-                startActivity(homeIntent);
+
                 break;
             case R.id.createAccountBtn:
                 //code for signup

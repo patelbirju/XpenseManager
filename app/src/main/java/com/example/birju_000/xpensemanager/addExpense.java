@@ -1,5 +1,7 @@
 package com.example.birju_000.xpensemanager;
 
+import android.content.ContentValues;
+import android.os.StrictMode;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,14 +14,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class addExpense extends AppCompatActivity
         implements TextView.OnEditorActionListener, View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     private EditText dateText;
-    private Button addExpenseBtn;
+    private Button saveExpenseBtn;
 
+    private static String date;
     private static String amount;
     private static String location;
     private static String description;
@@ -37,9 +41,9 @@ public class addExpense extends AppCompatActivity
         categoriesSpinner.setAdapter(adapter);
 
         dateText = (EditText) findViewById(R.id.dateText);
-        addExpenseBtn = (Button) findViewById(R.id.addExpenseBtn);
+        saveExpenseBtn = (Button) findViewById(R.id.saveExpenseBtn);
 
-        addExpenseBtn.setOnClickListener(this);
+        saveExpenseBtn.setOnClickListener(this);
         dateText.setOnClickListener(this);
         categoriesSpinner.setOnItemSelectedListener(this);
     }
@@ -55,9 +59,34 @@ public class addExpense extends AppCompatActivity
         {
             showDatePickerDialog(view);
         }
-        if(view.getId() == R.id.addExpenseBtn)
+        if(view.getId() == R.id.saveExpenseBtn)
         {
-            //Create expense and add it
+            date = ((EditText)findViewById(R.id.dateText)).getText().toString();
+            amount = ((EditText)findViewById(R.id.amountText)).getText().toString();
+            location = ((EditText)findViewById(R.id.locationText)).getText().toString();
+            description = ((EditText)findViewById(R.id.descriptionText)).getText().toString();
+
+
+
+            try{
+                ContentValues values = new ContentValues();
+                values.put(XpenseManagerDB.DATE, date);
+                values.put(XpenseManagerDB.AMOUNT, amount);
+                values.put(XpenseManagerDB.LOCATION, location);
+                values.put(XpenseManagerDB.DESCRIPTION, description);
+                values.put(XpenseManagerDB.CATEGORY, category);
+
+                XpenseManagerDB db = new XpenseManagerDB(getApplicationContext());
+
+                long rowID = db.insertExpense(values);
+                if(rowID > 0){
+                    Toast.makeText(this, "Expense Successfully added "+rowID, Toast.LENGTH_LONG).show();
+                }
+            }
+            catch (Exception ex){
+                Log.e("Exception message: ",ex.getMessage());
+            }
+
         }
     }
 
@@ -68,8 +97,8 @@ public class addExpense extends AppCompatActivity
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        String cate = (String) parent.getItemAtPosition(pos);
-        Log.i("Selected category: ", cate);
+        category = (String) parent.getItemAtPosition(pos);
+
     }
 
     @Override

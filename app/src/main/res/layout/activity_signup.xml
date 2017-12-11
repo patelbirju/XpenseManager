@@ -11,7 +11,7 @@
         android:id="@+id/firstNameLabel"
         android:layout_width="95dp"
         android:layout_height="31dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="20dp"
         android:text="@string/firstNameLabel"
         android:textAlignment="gravity"
@@ -19,7 +19,7 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline4"
-        tools:layout_editor_absoluteY="86dp" />
+        android:layout_marginTop="68dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -39,7 +39,7 @@
         android:id="@+id/firstNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -54,9 +54,9 @@
         android:id="@+id/lastNameLabel"
         android:layout_width="95dp"
         android:layout_height="31dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:text="@string/lastNameLabel"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -67,38 +67,35 @@
         android:id="@+id/lastNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/lastNameLabel"
         app:layout_constraintLeft_toRightOf="@+id/lastNameLabel"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameText"
-        tools:layout_editor_absoluteY="101dp" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
 
     <TextView
         android:id="@+id/emailLabel"
         android:layout_width="95dp"
         android:layout_height="31dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:text="@string/emailLabel"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameLabel"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="158dp" />
+        app:layout_constraintTop_toBottomOf="@+id/lastNameLabel" />
 
     <EditText
         android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBaseline_toBaselineOf="@+id/emailLabel"
@@ -109,31 +106,27 @@
         android:id="@+id/passwordLabelSignUp"
         android:layout_width="95dp"
         android:layout_height="31dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:text="@string/passwordLabelSignUp"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLabel"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="202dp" />
+        app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
 
     <EditText
         android:id="@+id/passwordTextSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/passwordLabelSignUp"
         app:layout_constraintLeft_toRightOf="@+id/passwordLabelSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameText"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="195dp" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
 
     <Button
         android:id="@+id/createAccountBtn"
@@ -152,17 +145,20 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="214dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="275dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
         android:text="@string/welcomeText"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        app:layout_constraintLeft_toRightOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent"
-        app:layout_constraintTop_toTopOf="@+id/parent"
-        tools:layout_editor_absoluteX="74dp" />
+        app:layout_constraintTop_toTopOf="@+id/parent" />
 
 </android.support.constraint.ConstraintLayout>

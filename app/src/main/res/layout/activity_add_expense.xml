@@ -162,13 +162,13 @@
         tools:layout_editor_absoluteY="226dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveExpenseBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="98dp"
         android:layout_marginStart="98dp"
         android:layout_marginTop="30dp"
-        android:text="@string/addExpenseBtn"
+        android:text="@string/saveExpenseBtn"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@+id/parent"

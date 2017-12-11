@@ -1,15 +1,25 @@
+package com.example.birju_000.xpensemanager;
+
 /**
  * Created by Bpatel0967 on 11/23/2017.
  */
 
 public class Expense {
 
+
+    private int expenseId;
+    private String date;
     private  double amount;
     private  String location;
     private  String description;
     private  String category;
 
-    public Expense(double amount, String location, String description, String category){
+    public  Expense(){
+
+    }
+
+    public Expense(String date, double amount, String location, String description, String category){
+        this.date = date;
         this.amount = amount;
         this.location = location;
         this.description = description;
@@ -17,6 +27,22 @@ public class Expense {
     }
 
     //getters and setters
+    public int getExpenseId() {
+        return expenseId;
+    }
+
+    public void setExpenseId(int expenseId) {
+        this.expenseId = expenseId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public double getAmount() {
         return amount;
     }

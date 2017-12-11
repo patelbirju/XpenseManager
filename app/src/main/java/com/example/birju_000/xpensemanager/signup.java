@@ -1,6 +1,7 @@
 package com.example.birju_000.xpensemanager;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class signup extends AppCompatActivity
     private static String email;
     private static String password;
 
-    private UserDB.UserDbHelper helper;
+    private XpenseManagerDB.UserDbHelper helper;
     private SQLiteDatabase db;
 
     @Override
@@ -51,16 +52,20 @@ public class signup extends AppCompatActivity
 
         try{
             ContentValues values = new ContentValues();
-            values.put(UserDB.FIRST_NAME, firstName);
-            values.put(UserDB.LAST_NAME, lastName);
-            values.put(UserDB.EMAIL, email);
-            values.put(UserDB.PASSWORD, password);
+            values.put(XpenseManagerDB.FIRST_NAME, firstName);
+            values.put(XpenseManagerDB.LAST_NAME, lastName);
+            values.put(XpenseManagerDB.EMAIL, email);
+            values.put(XpenseManagerDB.PASSWORD, password);
 
-            UserDB user = new UserDB(getApplicationContext());
+            XpenseManagerDB user = new XpenseManagerDB(getApplicationContext());
 
             long rowID = user.insertUser(values);
             if(rowID > 0){
                 Toast.makeText(this, "Account Successfully Created. "+rowID, Toast.LENGTH_LONG).show();
+
+                Intent homeIntent = new Intent(this,home.class);
+                startActivity(homeIntent);
+
             }
 
 
@@ -79,10 +84,10 @@ public class signup extends AppCompatActivity
 
     public static ContentValues getUserData(){
         ContentValues values = new ContentValues();
-        values.put(UserDB.FIRST_NAME, firstName);
-        values.put(UserDB.LAST_NAME, lastName);
-        values.put(UserDB.EMAIL, email);
-        values.put(UserDB.PASSWORD, password);
+        values.put(XpenseManagerDB.FIRST_NAME, firstName);
+        values.put(XpenseManagerDB.LAST_NAME, lastName);
+        values.put(XpenseManagerDB.EMAIL, email);
+        values.put(XpenseManagerDB.PASSWORD, password);
 
         return values;
     }

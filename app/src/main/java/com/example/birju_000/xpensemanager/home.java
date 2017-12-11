@@ -14,6 +14,7 @@ public class home extends AppCompatActivity
     {
 
         private Button addExpenseBtn;
+        private Button myExpensesBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,9 @@ public class home extends AppCompatActivity
 
         addExpenseBtn = (Button) findViewById(R.id.addExpenseBtn);
         addExpenseBtn.setOnClickListener(this);
+
+        myExpensesBtn = (Button) findViewById(R.id.myExpensesBtn);
+        myExpensesBtn.setOnClickListener(this);
 
         Toast.makeText(this, "Welcome Birju...", Toast.LENGTH_LONG).show();
     }
@@ -32,6 +36,11 @@ public class home extends AppCompatActivity
                 case R.id.addExpenseBtn:
                     Intent addExpense = new Intent(this, addExpense.class);
                     startActivity(addExpense);
+                    break;
+                case R.id.myExpensesBtn:
+                    //code for listing all existing expenses
+                    Intent expenses = new Intent(this, expenses.class);
+                    startActivity(expenses);
                     break;
             }
         }

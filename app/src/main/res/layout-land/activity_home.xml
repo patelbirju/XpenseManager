@@ -12,7 +12,7 @@
         tools:context="com.example.birju_000.xpensemanager.home">
 
         <Button
-            android:id="@+id/myExpenseBtn"
+            android:id="@+id/myExpensesBtn"
             android:layout_width="175dp"
             android:layout_height="47dp"
             android:layout_marginTop="50dp"
@@ -30,7 +30,7 @@
             android:text="@string/addExpenseLabel"
             app:layout_constraintLeft_toLeftOf="@+id/parent"
             app:layout_constraintRight_toRightOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/myExpenseBtn"
+            app:layout_constraintTop_toBottomOf="@+id/myExpensesBtn"
             tools:layout_editor_absoluteX="25dp"
             tools:layout_editor_absoluteY="114dp" />
 

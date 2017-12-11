@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.birju_000.xpensemanager.addExpense">
+
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/dateLabel"
+            android:textAlignment="gravity"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+        <EditText
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"
+            android:text="@string/datePicked"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dateLabel"
+            app:layout_constraintLeft_toRightOf="@+id/dateLabel" />
+
+        <TextView
+            android:id="@+id/categoryLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/categoryLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateLabel"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Spinner
+            android:id="@+id/categoriesSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/categoryLabel"
+            app:layout_constraintLeft_toRightOf="@+id/categoryLabel"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="45dp" />
+
+        <TextView
+            android:id="@+id/amountLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/amountLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryLabel"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <EditText
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@string/amountText"
+            app:layout_constraintBaseline_toBaselineOf="@+id/amountLabel"
+            app:layout_constraintLeft_toRightOf="@+id/amountLabel"
+            app:layout_constraintTop_toBottomOf="@+id/categoriesSpinner"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <TextView
+            android:id="@+id/locationLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/locationLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountLabel"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <EditText
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/locationText"
+            app:layout_constraintBaseline_toBaselineOf="@+id/locationLabel"
+            app:layout_constraintLeft_toRightOf="@+id/locationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/amountLabel"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/descriptionLabel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationLabel"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="226dp" />
+
+        <EditText
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/descriptionText"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel"
+            app:layout_constraintLeft_toRightOf="@+id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/locationLabel"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="226dp" />
+
+        <Button
+            android:id="@+id/saveExpenseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="98dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/saveExpenseBtn"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/parent"
+            app:layout_constraintRight_toRightOf="@+id/parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="304dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
