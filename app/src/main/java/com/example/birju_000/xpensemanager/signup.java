@@ -25,14 +25,10 @@ public class signup extends AppCompatActivity
     private static String email;
     private static String password;
 
-    private XpenseManagerDB.UserDbHelper helper;
-    private SQLiteDatabase db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
 
         createAccountBtn = (Button) findViewById(R.id.createAccountBtn);
         createAccountBtn.setOnClickListener(this);
@@ -49,7 +45,6 @@ public class signup extends AppCompatActivity
         email = ((EditText) findViewById(R.id.emailText)).getText().toString();
         password = ((EditText) findViewById(R.id.passwordTextSignUp)).getText().toString();
 
-
         try{
             ContentValues values = new ContentValues();
             values.put(XpenseManagerDB.FIRST_NAME, firstName);
@@ -61,20 +56,15 @@ public class signup extends AppCompatActivity
 
             long rowID = user.insertUser(values);
             if(rowID > 0){
-                Toast.makeText(this, "Account Successfully Created. "+rowID, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Account Successfully Created. ", Toast.LENGTH_LONG).show();
 
                 Intent homeIntent = new Intent(this,home.class);
                 startActivity(homeIntent);
-
             }
-
-
         }
         catch (Exception ex){
             Log.e("Exception message: ",ex.getMessage());
         }
-
-
     }
 
     @Override

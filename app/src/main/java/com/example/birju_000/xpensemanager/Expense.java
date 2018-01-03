@@ -6,7 +6,6 @@ package com.example.birju_000.xpensemanager;
 
 public class Expense {
 
-
     private int expenseId;
     private String date;
     private  double amount;

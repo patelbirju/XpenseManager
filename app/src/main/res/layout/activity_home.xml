@@ -10,8 +10,8 @@
     <Button
         android:id="@+id/myExpensesBtn"
         android:layout_width="175dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="125dp"
         android:text="@string/myExpensesLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/addExpenseBtn"
         android:layout_width="175dp"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/addExpenseLabel"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
@@ -33,7 +33,7 @@
     <Button
         android:id="@+id/manageExpenseBtn"
         android:layout_width="175dp"
-        android:layout_height="43dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/manageExpenseLabel"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/setupBudgetBtn"
         android:layout_width="175dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/setupBudgetLabel"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
@@ -55,12 +55,43 @@
     <Button
         android:id="@+id/generateGraphBtn"
         android:layout_width="175dp"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="@string/generateGraphLabel"
         app:layout_constraintLeft_toLeftOf="@+id/parent"
         app:layout_constraintRight_toRightOf="@+id/parent"
         app:layout_constraintTop_toBottomOf="@+id/setupBudgetBtn"
         tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/txtTotalExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/parent"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <ImageView
+        android:id="@+id/iconOnline"
+        android:layout_width="81dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/getIconBtn"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:text="GET ICON"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/generateGraphBtn" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,8 @@
 package com.example.birju_000.xpensemanager;
 
+import android.content.ComponentName;
 import android.content.ContentValues;
-import android.os.StrictMode;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,12 +23,16 @@ public class addExpense extends AppCompatActivity
 
     private EditText dateText;
     private Button saveExpenseBtn;
+    private Button calculatorBtn;
 
     private static String date;
     private static String amount;
     private static String location;
     private static String description;
     private static String category;
+
+    private static final String CALCULATOR_PACKAGE = "com.android.calculator2";
+    private static final String CALCULATOR_CLASS = "com.android.calculator2.Calculator";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +47,10 @@ public class addExpense extends AppCompatActivity
 
         dateText = (EditText) findViewById(R.id.dateText);
         saveExpenseBtn = (Button) findViewById(R.id.saveExpenseBtn);
+        calculatorBtn = (Button) findViewById(R.id.calculatorBtn);
 
         saveExpenseBtn.setOnClickListener(this);
+        calculatorBtn.setOnClickListener(this);
         dateText.setOnClickListener(this);
         categoriesSpinner.setOnItemSelectedListener(this);
     }
@@ -66,8 +73,6 @@ public class addExpense extends AppCompatActivity
             location = ((EditText)findViewById(R.id.locationText)).getText().toString();
             description = ((EditText)findViewById(R.id.descriptionText)).getText().toString();
 
-
-
             try{
                 ContentValues values = new ContentValues();
                 values.put(XpenseManagerDB.DATE, date);
@@ -80,13 +85,24 @@ public class addExpense extends AppCompatActivity
 
                 long rowID = db.insertExpense(values);
                 if(rowID > 0){
-                    Toast.makeText(this, "Expense Successfully added "+rowID, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Expense Successfully added ", Toast.LENGTH_LONG).show();
+                    Intent expenses = new Intent(this, expenses.class);
+                    startActivity(expenses);
                 }
             }
             catch (Exception ex){
                 Log.e("Exception message: ",ex.getMessage());
             }
-
+        }
+        if(view.getId() == R.id.calculatorBtn)
+        {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_LAUNCHER);
+            intent.setComponent(new ComponentName(
+                    CALCULATOR_PACKAGE,
+                    CALCULATOR_CLASS));
+            startActivity(intent);
         }
     }
 
@@ -94,13 +110,11 @@ public class addExpense extends AppCompatActivity
     public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
         return false;
     }
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         category = (String) parent.getItemAtPosition(pos);
 
     }
-
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 

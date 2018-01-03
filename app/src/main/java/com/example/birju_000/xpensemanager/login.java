@@ -1,5 +1,6 @@
 package com.example.birju_000.xpensemanager;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -21,7 +22,7 @@ public class login extends AppCompatActivity
     private EditText userNameText;
     private EditText passwordText;
 
-    private String userName;
+    private String email;
     private String password;
 
 
@@ -46,26 +47,27 @@ public class login extends AppCompatActivity
             case R.id.loginBtn:
                 //code for Login
                 // username is assumed as email, temporary
-
                 userNameText = (EditText) findViewById(R.id.userNameText);
-                userName = userNameText.getText().toString();
+                email = userNameText.getText().toString();
                 passwordText = (EditText) findViewById(R.id.passwordText);
                 password = passwordText.getText().toString();
 
-                //System.out.println("Username: "+userName.getText().toString()+", Password: "+passWord.getText().toString());
                 XpenseManagerDB db = new XpenseManagerDB(getApplicationContext());
-                User user = db.getUser(userName);
+                User user = db.getUser(email);
                 if(user == null){
                     Toast.makeText(this, "Error: user not found ", Toast.LENGTH_LONG).show();
                 }
                 else{
+                    Intent backgroundService = new Intent(this, BackgroundService.class);
+                    backgroundService.setData(Uri.parse(email));
+                    this.startService(backgroundService);
+
                     Intent homeIntent = new Intent(this,home.class);
                     startActivity(homeIntent);
                     Toast.makeText(this, "Welcome, "+user.getFirstName(), Toast.LENGTH_LONG).show();
                 }
-
-
                 break;
+
             case R.id.createAccountBtn:
                 //code for signup
                 Intent signUpIntent = new Intent(this, signup.class);

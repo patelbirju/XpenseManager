@@ -14,18 +14,18 @@
 
         <TextView
             android:id="@+id/userNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
-            android:layout_marginLeft="-293dp"
+            android:layout_width="92dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="7dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="-1dp"
             android:paddingBottom="5dp"
             android:text="@string/userNameLabel"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="@+id/guideline"
             app:layout_constraintLeft_toRightOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/guideline2"
-            android:layout_marginTop="-21dp" />
+            app:layout_constraintTop_toBottomOf="@+id/guideline2" />
 
         <EditText
             android:id="@+id/userNameText"
@@ -101,13 +101,13 @@
         <Button
             android:id="@+id/createAccountBtn"
             android:layout_width="195dp"
-            android:layout_height="41dp"
+            android:layout_height="47dp"
             android:layout_marginTop="11dp"
             android:text="@string/signUpBtn"
+            app:layout_constraintHorizontal_bias="0.405"
             app:layout_constraintLeft_toLeftOf="@+id/guideline"
             app:layout_constraintRight_toRightOf="@+id/parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-            app:layout_constraintHorizontal_bias="0.405" />
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     </android.support.constraint.ConstraintLayout>
 

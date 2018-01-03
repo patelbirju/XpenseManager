@@ -10,7 +10,7 @@
     <string name="createAccountBtn">Create Account</string>
 
 
-    <string name="userNameLabel">User Name</string>
+    <string name="userNameLabel">Email</string>
     <string name="passwordLabel">Password</string>
     <string name="loginBtnText">Login</string>
 

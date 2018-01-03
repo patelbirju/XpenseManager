@@ -6,15 +6,12 @@ package com.example.birju_000.xpensemanager;
 
 public class User {
 
-
-
     private int userId;
     private String userName;
     private  String firstName;
     private  String lastName;
     private  String email;
     private  String password;
-
 
     public User(int userId, String firstName, String lastName, String email, String password) {
         this.userId = userId;

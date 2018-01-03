@@ -280,7 +280,6 @@ public final class XpenseManagerDB {
             }while (cursor.moveToNext());
         }
         return  expenses;
-
     }
 
     public Cursor getAllExpenses(){
@@ -291,6 +290,21 @@ public final class XpenseManagerDB {
             cursor.moveToFirst();
         }
         return  cursor;
+    }
+
+    public double getTotalExpenses(){
+        double total = 0f;
+        String query = "SELECT * FROM " + EXPENSE_TABLE;
+        this.openWriteableDB();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()){
+            do
+            {
+                total += (Double.parseDouble(cursor.getString(2)));
+            }while (cursor.moveToNext());
+        }
+        return total;
     }
 }
 
