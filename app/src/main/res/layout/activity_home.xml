@@ -77,8 +77,8 @@
 
     <ImageView
         android:id="@+id/iconOnline"
-        android:layout_width="81dp"
-        android:layout_height="66dp"
+        android:layout_width="104dp"
+        android:layout_height="87dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"

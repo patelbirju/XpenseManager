@@ -145,10 +145,10 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="275dp"
+        android:layout_width="250dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="20dp"
         android:text="@string/welcomeText"
         android:textAlignment="center"
